@@ -21,7 +21,7 @@
 
 default: &default
   adapter: mysql2
-  encoding: unicode
+  encoding: utf8
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV["MYSQL_MAX_CONNECTIONS"] || 5 %>
@@ -35,8 +35,8 @@ development:
   <<: *default
   database: rails-app_development
   host: localhost
-  username: postgres
-  password: postgres
+  username: mysql
+  password: password
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
